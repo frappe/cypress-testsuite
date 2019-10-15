@@ -30,5 +30,5 @@ $ git clone git@github.com:frappe/cypress-testsuite.git cypress
 ## Documentation
 Checkout the [commands.js](support/commands.js) for available commands
 
-## Exmaple
+## Example
  You can find examples in the  [integration folder](integration/).
