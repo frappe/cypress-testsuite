@@ -1,16 +1,20 @@
 Cypress Testsuite
 ---
 
-1. delete the existing cypress folder within your frappe application folder.
+Abstraction of Cypress for the [frappe framework](https://github.com/frappe/frappe)
 
-2. clone this repository in the apps/frappe directory
+## Installation 
+
+1. Delete the existing cypress folder within your frappe application folder.
+
+2. Clone this repository in the apps/frappe directory
 
 ```bash
 $ git clone git@github.com:frappe/cypress-testsuite.git cypress
 
 ```
 
-3. create a cypress.json file within the frappe application directory, an example config for it would go as follows:
+3. Create a cypress.json file within the frappe application directory, an example config for it would go as follows:
 
 
 ```json
@@ -23,5 +27,8 @@ $ git clone git@github.com:frappe/cypress-testsuite.git cypress
 }
 ```
 
-4. checkout the [commands.js](support/commands.js) for available commands, and some [example ui tests](integration/) for guidelines.
+## Documentation
+Checkout the [commands.js](support/commands.js) for available commands
 
+## Exmaple
+ You can find examples in the  [integration folder](integration/) for examples.
