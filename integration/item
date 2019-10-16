@@ -1,0 +1,20 @@
+// Test case for a simple stock and non-stock item.
+
+context('Table MultiSelect', () => {
+	beforeEach(() => {
+		cy.login();
+	});
+
+	it('Create a stock item', () => {
+		cy.new_form("Item");
+		cy.fill_field("Item Code", "iPhone X");
+    cy.fill_field("Item Name", "iPhone X. 64 GB");
+    cy.fill_field("Item Group", "Products");
+    // how to fill or remove value from the check fied?
+    // cy.fill_field("Maintain Stock", "0")
+    cy.fill_field("Maintain Stock", "1")
+		cy.save();
+		
+    // Item based on naming series
+	});
+});
