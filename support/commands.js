@@ -51,8 +51,8 @@ Cypress.Commands.add('login', (email, password) => {
 Cypress.Commands.add('call', (method, args) => {
 	/*
 	 * calls an api method as a POST request
-	 * @param method {string} path to the method that is to be called
-	 * @param args {dictionary} required arguments for the called method
+	 * @apiParam method {string} path to the method that is to be called
+	 * @apiParam args {dictionary} required arguments for the called method
 	 */
 	return cy.window().its('frappe.csrf_token').then(csrf_token => {
 		return cy.request({
@@ -242,7 +242,7 @@ Cypress.Commands.add('clear_cache', () => {
 Cypress.Commands.add('dialog', (opts) => {
 	/*
 	 * open a dialog with specified options
-	 * @param opts {array} options to generate the specified dialog
+	 * @param opts {object} options to generate the specified dialog
 	 */
 	return cy.window().then(win => {
 		var d = new win.frappe.ui.Dialog(opts);
@@ -312,7 +312,7 @@ Cypress.Commands.add('fill_filter', (label, value) => {
 Cypress.Commands.add('upload_files', (files, fieldname) => {
 	/*
 	 * upload files to the current document form under the specified field
-	 * @param files {array} list of files that is to be uploaded
+	 * @param files {array} list of files that are to be uploaded
 	 * @param fieldname {string} field to which the files should be attached
 	 */
 	cy.get(`.btn-attach[data-fieldname="${fieldname}"]`).as('attach_button');
